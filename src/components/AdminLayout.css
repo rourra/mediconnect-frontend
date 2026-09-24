@@ -1,0 +1,166 @@
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --primary-light: #eef2ff;
+  --accent: #06b6d4;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --radius: 14px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-page {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-page);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+}
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 2.5rem;
+  overflow-x: hidden;
+}
+
+.admin-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.admin-sidebar .brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+}
+
+.admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.admin-sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  color: #9ca3af;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.admin-sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.admin-sidebar nav a.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.admin-user-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+
+.admin-user-card img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.admin-user-card strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.admin-user-card p {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.logout-btn {
+  margin-top: 0.75rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+  padding: 0.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: var(--danger);
+  color: #fca5a5;
+}
+
+@media (max-width: 900px) {
+  .admin-page {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    overflow-x: auto;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .admin-sidebar nav {
+    flex-direction: row;
+  }
+
+  .admin-user-card,
+  .logout-btn {
+    display: none;
+  }
+
+  .admin-main {
+    padding: 1.25rem;
+  }
+}

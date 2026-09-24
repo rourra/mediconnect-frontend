@@ -1,0 +1,129 @@
+.assistant-header {
+  margin-bottom: 1.25rem;
+}
+
+.assistant-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.assistant-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.assistant-chatbox {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.assistant-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.assistant-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: 75%;
+}
+
+.assistant-bubble p {
+  margin: 0;
+  padding: 0.65rem 0.95rem;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.assistant-bubble.mine {
+  align-self: flex-end;
+}
+
+.assistant-bubble.mine p {
+  background: var(--primary);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.assistant-bubble.bot {
+  align-self: flex-start;
+}
+
+.assistant-bubble.bot p {
+  background: var(--bg-page);
+  color: var(--text-main);
+  border-bottom-left-radius: 4px;
+  white-space: pre-wrap;
+}
+
+.assistant-avatar {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+.assistant-typing {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.assistant-input-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.assistant-input-row input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.assistant-input-row input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.assistant-input-row button {
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.assistant-input-row button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.assistant-input-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.assistant-disclaimer {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+}

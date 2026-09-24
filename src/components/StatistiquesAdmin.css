@@ -1,0 +1,285 @@
+/* Trois cartes côte à côte ; elles réutilisent la classe .admin-card du tableau
+   de bord, donc le fond, la bordure et l'ombre sont ceux des autres cartes. */
+.sa-grille {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.sa-grille .sa-carte {
+  margin: 0;
+  min-width: 0;
+}
+
+.sa-grille .sa-carte h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sa-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.sa-total {
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sa-total--alerte {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.sa-total--ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.sa-pastille {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--sa-couleur, #4f46e5);
+}
+
+/* ---------------------------------------------------------------------------
+   Anneau
+   --------------------------------------------------------------------------- */
+.sa-anneau-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sa-anneau {
+  width: 150px;
+  height: 150px;
+}
+
+.sa-anneau-fond {
+  fill: none;
+  stroke: #eef2f7;
+  stroke-width: 16;
+}
+
+.sa-anneau-segment {
+  fill: none;
+  stroke-width: 16;
+}
+
+.sa-anneau-nombre {
+  font-size: 26px;
+  font-weight: 800;
+  fill: #0f172a;
+}
+
+.sa-anneau-legende {
+  font-size: 9px;
+  fill: #64748b;
+}
+
+.sa-anneau-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.sa-anneau-liste li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.sa-anneau-nom {
+  flex: 1;
+  font-weight: 600;
+}
+
+.sa-anneau-liste strong {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+/* ---------------------------------------------------------------------------
+   Barres (spécialités)
+   --------------------------------------------------------------------------- */
+.sa-barres {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.sa-barre-ligne {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sa-barre-infos {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.sa-barre-nom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.sa-barre-valeurs {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.sa-barre-valeurs strong {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.sa-barre-pct {
+  min-width: 2.6rem;
+  text-align: right;
+  font-size: 0.78rem;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.sa-barre-piste {
+  height: 8px;
+  border-radius: 999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.sa-barre-remplie {
+  height: 100%;
+  min-width: 6px;
+  border-radius: 999px;
+  background: var(--sa-couleur, #4f46e5);
+}
+
+/* ---------------------------------------------------------------------------
+   Diagnostic de la plateforme
+   --------------------------------------------------------------------------- */
+.sa-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sa-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.sa-point-icone {
+  flex-shrink: 0;
+}
+
+.sa-point--ok {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.sa-point--alerte {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.sa-point--info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .sa-grille {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .sa-grille {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Lien vers la page « Utilisateurs »
+   --------------------------------------------------------------------------- */
+.sa-note {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.sa-grille .sa-lien {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.65rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.sa-grille .sa-lien:hover {
+  background: #eef2ff;
+  border-color: #4f46e5;
+  color: #4338ca;
+}
+
+.sa-grille .sa-lien:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}

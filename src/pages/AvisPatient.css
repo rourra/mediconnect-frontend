@@ -1,0 +1,256 @@
+.avispat-back {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.avispat-back:hover {
+  background: var(--border);
+}
+
+.avispat-header {
+  margin-bottom: 1.5rem;
+}
+
+.avispat-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.avispat-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.avispat-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.avispat-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.avispat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.avispat-card h2 {
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+}
+
+.avispat-empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  line-height: 1.5;
+}
+
+.avispat-success {
+  background: #dcfce7;
+  color: var(--success);
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.75rem;
+}
+
+.avispat-error {
+  background: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.75rem;
+}
+
+.avispat-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.avispat-card label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.avispat-card select,
+.avispat-card textarea {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+
+.avispat-card textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.avispat-card select:focus,
+.avispat-card textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.avispat-selected-doctor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-page);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.avispat-selected-doctor img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avispat-selected-doctor h3 {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.avispat-selected-doctor p {
+  margin: 0.1rem 0 0;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.avispat-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.avispat-stars span {
+  font-size: 1.7rem;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.avispat-stars span:hover {
+  transform: scale(1.15);
+}
+
+.avispat-stars span.active {
+  color: #fbbf24;
+}
+
+.avispat-note-value {
+  margin-left: 0.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.9rem;
+  cursor: default !important;
+}
+
+.avispat-note-value:hover {
+  transform: none !important;
+}
+
+.avispat-card button[type="submit"] {
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.avispat-card button[type="submit"]:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.avispat-card button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.avispat-item {
+  border-top: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.avispat-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.avispat-item-doctor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.avispat-item-doctor img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avispat-item-doctor h3 {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.avispat-item-doctor p {
+  margin: 0.1rem 0 0;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.avispat-item-note {
+  color: #fbbf24;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.avispat-item p {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  margin: 0 0 0.4rem;
+}
+
+.avispat-item small {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+}
+
+@media (max-width: 900px) {
+  .avispat-layout {
+    grid-template-columns: 1fr;
+  }
+}

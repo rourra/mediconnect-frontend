@@ -1,0 +1,622 @@
+.medecin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.medecin-topbar h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.medecin-topbar p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.medecin-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.pending-banner {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dashboard-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.medecin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.medecin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.medecin-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.big-card {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.empty-state {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Boutons
+   --------------------------------------------------------------------------- */
+.medecin-card button {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.65rem;
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.medecin-card button:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.medecin-card button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-title-row h3 {
+  margin: 0;
+}
+
+.card-title-row button {
+  width: auto;
+  margin: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.78rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Rendez-vous
+   --------------------------------------------------------------------------- */
+.rdv-dashboard-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.7rem;
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.rdv-dashboard-item:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Tuile de date façon calendrier : jour en grand, mois et heure dessous */
+.rdv-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 0.5rem;
+  text-align: center;
+}
+
+.rdv-date-box .rdv-jour {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary);
+}
+
+.rdv-date-box .rdv-mois {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.rdv-date-box .rdv-heure {
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.rdv-info-box {
+  flex: 1;
+  min-width: 0;
+}
+
+.rdv-info-box h4 {
+  margin: 0 0 0.15rem;
+  font-size: 0.92rem;
+}
+
+.rdv-info-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.rdv-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.rdv-status.en_attente {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.rdv-status.confirme {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.rdv-status.termine {
+  background: #e0e7ff;
+  color: var(--primary);
+}
+
+.rdv-status.annule {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+/* ---------------------------------------------------------------------------
+   Invitations
+   --------------------------------------------------------------------------- */
+.invitation-mini-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.invitation-mini-item:last-child {
+  border-bottom: none;
+}
+
+.invitation-mini-item img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.invitation-mini-item strong {
+  font-size: 0.85rem;
+  display: block;
+}
+
+.invitation-mini-item p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Répartition des diagnostics
+   --------------------------------------------------------------------------- */
+.stats-total {
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stats-bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.stats-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stats-bar-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.stats-bar-nom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  font-weight: 600;
+}
+
+.stats-bar-pastille {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--stats-couleur, var(--primary));
+}
+
+.stats-bar-valeurs {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.stats-bar-valeurs strong {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.stats-bar-pct {
+  min-width: 2.6rem;
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-bar-track {
+  background: #eef2f7;
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.stats-bar-fill {
+  height: 100%;
+  min-width: 6px;
+  border-radius: 999px;
+  background: var(--stats-couleur, var(--primary));
+  transition: width 0.3s ease;
+}
+
+.stats-resume {
+  margin: 1.25rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.stats-resume strong {
+  color: var(--text-main);
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .medecin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .big-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .medecin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .big-card {
+    grid-column: span 1;
+  }
+
+  .rdv-dashboard-item {
+    flex-wrap: wrap;
+  }
+
+  .rdv-info-box {
+    flex-basis: calc(100% - 100px);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Bandeau d'accueil (occupe toute la largeur de la grille)
+   --------------------------------------------------------------------------- */
+.hero-medecin {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.6rem 1.9rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(79, 70, 229, 0.22);
+}
+
+/* App.css impose une couleur sombre à tous les h2 (!important) : on la surcharge */
+.hero-medecin .hero-titre {
+  margin: 0 0 0.4rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.hero-medecin .hero-sous-titre {
+  margin: 0 0 1.1rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-medecin .hero-bouton {
+  padding: 0.65rem 1.2rem;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: #4338ca;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-medecin .hero-bouton:hover {
+  background: #eef2ff;
+}
+
+.hero-medecin .hero-bouton:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.hero-prochain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 230px;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.hero-prochain .hero-prochain-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-prochain strong {
+  font-size: 1.05rem;
+}
+
+.hero-prochain .hero-prochain-vide {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------------
+   Activité des rendez-vous (anneau)
+   --------------------------------------------------------------------------- */
+.donut-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.donut {
+  width: 150px;
+  height: 150px;
+}
+
+.donut-fond {
+  fill: none;
+  stroke: #eef2f7;
+  stroke-width: 16;
+}
+
+.donut-segment {
+  fill: none;
+  stroke-width: 16;
+}
+
+.donut-nombre {
+  font-size: 26px;
+  font-weight: 800;
+  fill: var(--text-main, #0f172a);
+}
+
+.donut-legende {
+  font-size: 9px;
+  fill: var(--text-muted, #64748b);
+}
+
+.donut-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.donut-liste li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.donut-pastille {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--donut-couleur);
+}
+
+.donut-nom {
+  flex: 1;
+  font-weight: 600;
+}
+
+.donut-liste strong {
+  font-size: 0.95rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Accès rapide
+   --------------------------------------------------------------------------- */
+.acces-card {
+  grid-column: span 2;
+}
+
+.acces-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+.acces-tuile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-page);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.acces-tuile:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.acces-tuile:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.acces-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.4rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 1.2rem;
+}
+
+.acces-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.acces-texte {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.acces-badge {
+  min-width: 1.35rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.35rem;
+}
+
+@media (max-width: 700px) {
+  .acces-card {
+    grid-column: span 1;
+  }
+
+  .hero-prochain {
+    width: 100%;
+    min-width: 0;
+  }
+}

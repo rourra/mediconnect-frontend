@@ -1,0 +1,234 @@
+.dpm-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.dpm-back {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.dpm-back:hover {
+  background: var(--border);
+}
+
+.dpm-error-box {
+  background: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.dpm-patient-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dpm-patient-header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dpm-patient-header h1 {
+  font-size: 1.3rem;
+  margin: 0 0 0.15rem;
+}
+
+.dpm-patient-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.dpm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.dpm-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.dpm-card h3 {
+  margin: 0 0 1rem;
+  font-size: 0.98rem;
+}
+
+.dpm-card label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.7rem 0 0.3rem;
+}
+
+.dpm-card input,
+.dpm-card select,
+.dpm-card textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.dpm-card textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.dpm-card input:focus,
+.dpm-card select:focus,
+.dpm-card textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.dpm-message {
+  background: #dcfce7;
+  color: var(--success);
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.dpm-card button {
+  margin-top: 1.1rem;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.dpm-card button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.dpm-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dpm-history {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.dpm-empty {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.dpm-history-item {
+  border-top: 1px solid var(--border);
+  padding: 0.7rem 0;
+  font-size: 0.82rem;
+}
+
+.dpm-history-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.dpm-history-item strong {
+  display: block;
+}
+
+.dpm-history-item p {
+  margin: 0.2rem 0;
+  color: var(--text-main);
+}
+
+.dpm-history-item small {
+  color: var(--text-muted);
+}
+
+.dpm-history-item a {
+  color: var(--primary);
+  font-size: 0.78rem;
+}
+
+.dpm-tag {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.3rem;
+}
+
+.dpm-annule {
+  opacity: 0.55;
+}
+
+.dpm-badge-annule {
+  display: inline-block;
+  background: #fee2e2;
+  color: var(--danger);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+}
+
+.dpm-annuler-btn {
+  margin-top: 0.4rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--danger);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dpm-annuler-btn:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+.dpm-annuler-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+  .dpm-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .dpm-grid {
+    grid-template-columns: 1fr;
+  }
+}

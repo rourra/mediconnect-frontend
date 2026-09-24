@@ -1,0 +1,342 @@
+.rdvpat-page {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.rdvpat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.rdvpat-card h1 {
+  font-size: 1.15rem;
+  margin: 0 0 1.25rem;
+  font-weight: 700;
+}
+
+.rdvpat-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rdvpat-card label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.rdvpat-card select,
+.rdvpat-card input,
+.rdvpat-input {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  width: 100%;
+}
+
+.rdvpat-card select:focus,
+.rdvpat-card input:focus,
+.rdvpat-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.rdvpat-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.rdvpat-info {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin: 0.85rem 0 0;
+  line-height: 1.4;
+}
+
+.rdvpat-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 0.6rem 0;
+}
+
+.rdvpat-creneaux {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.rdvpat-creneaux button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-page);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rdvpat-creneaux button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.rdvpat-creneaux button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.rdvpat-error {
+  background: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.5rem;
+}
+
+.rdvpat-card button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.rdvpat-card button[type="submit"]:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.rdvpat-card button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   SECTION LISTE
+   ============================================ */
+.rdvpat-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.1rem;
+}
+
+.rdvpat-section-header h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.rdvpat-section-header p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.rdvpat-count {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.rdvpat-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.rdvpat-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rdvpat-tabs button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.rdvpat-tabs button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.rdvpat-tabs button span {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+}
+
+.rdvpat-tabs button.active span {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.rdvpat-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.rdvpat-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.empty-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.rdvpat-empty h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.rdvpat-empty p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.rdvpat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.rdvpat-item-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  background: var(--bg-page);
+}
+
+.rdvpat-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.rdvpat-top img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rdvpat-top h3 {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.rdvpat-top p {
+  margin: 0.1rem 0 0;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.rdvpat-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.rdvpat-info-grid div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.rdvpat-info-grid span {
+  color: var(--text-muted);
+}
+
+.rdvpat-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rdvpat-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.rdvpat-badge.en_attente {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.rdvpat-badge.confirme {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.rdvpat-badge.termine {
+  background: #e0e7ff;
+  color: var(--primary);
+}
+
+.rdvpat-badge.annule {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.rdvpat-delete-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--danger);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.rdvpat-delete-btn:hover {
+  background: #fee2e2;
+}
+
+@media (max-width: 900px) {
+  .rdvpat-page {
+    grid-template-columns: 1fr;
+  }
+}

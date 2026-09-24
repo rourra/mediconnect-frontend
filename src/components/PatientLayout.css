@@ -1,0 +1,185 @@
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --primary-light: #eef2ff;
+  --accent: #06b6d4;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --radius: 14px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.patient-page {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-page);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+}
+
+.patient-main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 2.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.patient-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.patient-sidebar .brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+}
+
+.patient-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.patient-sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  color: #9ca3af;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.patient-sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.patient-sidebar nav a.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.patient-sidebar nav a span {
+  margin-left: auto;
+  background: var(--danger);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+}
+
+.help-card {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.help-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.help-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.help-card button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  padding: 0.55rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.help-card button:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.logout-btn {
+  margin-top: 0.75rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+  padding: 0.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: var(--danger);
+  color: #fca5a5;
+}
+
+@media (max-width: 900px) {
+  .patient-page {
+    flex-direction: column;
+  }
+
+  .patient-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    overflow-x: auto;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .patient-sidebar nav {
+    flex-direction: row;
+  }
+
+  .help-card,
+  .logout-btn {
+    display: none;
+  }
+
+  .patient-main {
+    padding: 1.25rem;
+  }
+}

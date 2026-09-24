@@ -1,0 +1,79 @@
+/* Sélecteur « Comptes actifs / Comptes désactivés ».
+   App.css donne un dégradé et un soulèvement à tous les boutons : on les
+   neutralise ici pour obtenir un sélecteur discret. */
+.ua-onglets {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border-radius: 12px;
+  background: #f1f5f9;
+}
+
+.ua-onglet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ua-onglet:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: none;
+}
+
+.ua-onglet:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.ua-onglet--actif,
+.ua-onglet--actif:hover {
+  background: #fff;
+  color: #4338ca;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+.ua-compte {
+  min-width: 1.5rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+.ua-onglet--actif .ua-compte {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.ua-aide {
+  margin: 0.9rem 0 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+@media (max-width: 560px) {
+  .ua-onglets {
+    display: flex;
+    width: 100%;
+  }
+
+  .ua-onglet {
+    flex: 1;
+    justify-content: center;
+  }
+}

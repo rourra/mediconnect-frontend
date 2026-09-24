@@ -1,0 +1,123 @@
+/* Même carte que les autres cartes du tableau de bord (.doctor-card de App.css) */
+.rd-carte {
+  background: #fff;
+  border: 1px solid #edf0f7;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+}
+
+.rd-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rd-titre {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.rd-total {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---- Lignes ---- */
+.rd-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.rd-infos {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+
+.rd-nom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.rd-pastille {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--rd-couleur);
+}
+
+.rd-valeurs {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.rd-valeurs strong {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.rd-pct {
+  min-width: 42px;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Barres ---- */
+.rd-piste {
+  height: 8px;
+  border-radius: 999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.rd-barre {
+  height: 100%;
+  min-width: 6px;
+  border-radius: 999px;
+  background: var(--rd-couleur);
+}
+
+/* ---- Bas de carte ---- */
+.rd-resume {
+  margin: 20px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #edf0f7;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.rd-resume strong {
+  color: #0f172a;
+}
+
+.rd-vide {
+  padding: 18px 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #64748b;
+}

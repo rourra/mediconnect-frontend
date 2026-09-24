@@ -1,0 +1,100 @@
+.gu {
+  --gu-bordure: #e2e8f0;
+  --gu-doux: #64748b;
+  --gu-primaire: #4f46e5;
+}
+
+/* ---- Barre de recherche ---- */
+.gu-recherche {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gu-loupe {
+  position: absolute;
+  left: 14px;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.gu-champ {
+  flex: 1;
+  min-width: 0;
+  height: 46px;
+  padding: 0 14px 0 40px;
+  border: 1px solid var(--gu-bordure);
+  border-radius: 12px;
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.gu-champ::placeholder {
+  color: #94a3b8;
+}
+
+.gu-champ::-webkit-search-cancel-button {
+  display: none;
+}
+
+.gu-champ:focus-visible {
+  outline: 2px solid var(--gu-primaire);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+/* App.css donne un dégradé et un soulèvement à tous les boutons :
+   on les neutralise pour ce petit bouton secondaire. */
+.gu-effacer {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--gu-bordure);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--gu-doux);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gu-effacer:hover {
+  background: #f1f5f9;
+  transform: none;
+}
+
+.gu-effacer:focus-visible {
+  outline: 2px solid var(--gu-primaire);
+  outline-offset: 2px;
+}
+
+.gu-resume {
+  margin: 10px 2px 0;
+  font-size: 0.875rem;
+  color: var(--gu-doux);
+}
+
+/* ---- Sections ---- */
+.gu-groupe {
+  margin-top: 24px;
+}
+
+.gu-titre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.gu-compteur {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.8rem;
+  font-weight: 700;
+}

@@ -1,0 +1,90 @@
+.mespat-header {
+  margin-bottom: 1.25rem;
+}
+
+.mespat-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.mespat-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.mespat-search {
+  width: 100%;
+  max-width: 380px;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.mespat-search:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.mespat-loading,
+.mespat-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  line-height: 1.5;
+}
+
+.mespat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.mespat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mespat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.mespat-card img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mespat-card strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.mespat-card p {
+  margin: 0.1rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.mespat-arrow {
+  margin-left: auto;
+  color: var(--primary);
+  font-weight: 700;
+}

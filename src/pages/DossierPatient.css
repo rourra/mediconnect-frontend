@@ -1,0 +1,252 @@
+.dossierpat-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.dossierpat-header {
+  margin-bottom: 1.5rem;
+}
+
+.dossierpat-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.dossierpat-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.dossierpat-top {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.dossierpat-profile,
+.dossierpat-upload {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dossierpat-profile {
+  text-align: center;
+}
+
+.dossierpat-profile img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.dossierpat-profile h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+}
+
+.dossierpat-profile > p {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dossierpat-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.dossierpat-info span {
+  color: var(--text-muted);
+}
+
+.dossierpat-upload h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.dossierpat-upload > p {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.dossierpat-upload form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dossierpat-upload label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.7rem 0 0.3rem;
+}
+
+.dossierpat-upload input,
+.dossierpat-upload select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.86rem;
+}
+
+.dossierpat-upload input:focus,
+.dossierpat-upload select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.dossierpat-error {
+  background: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.8rem;
+}
+
+.dossierpat-upload button {
+  margin-top: 1.25rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dossierpat-upload button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.dossierpat-upload button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dossierpat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.dossierpat-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dossierpat-box-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.dossierpat-box-title span {
+  font-size: 1.3rem;
+  background: var(--primary-light);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dossierpat-box-title h2 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.dossierpat-box-title p {
+  margin: 0.1rem 0 0;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.dossierpat-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.dossierpat-file-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.dossierpat-row-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dossierpat-row-info h3 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.dossierpat-row-info p {
+  margin: 0.1rem 0;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.dossierpat-badge-annule {
+  display: inline-block;
+  background: #fee2e2;
+  color: var(--danger);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.dossierpat-row-info a {
+  font-size: 0.76rem;
+  color: var(--primary);
+}
+
+.dossierpat-row button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.dossierpat-empty {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 1000px) {
+  .dossierpat-top,
+  .dossierpat-grid {
+    grid-template-columns: 1fr;
+  }
+}

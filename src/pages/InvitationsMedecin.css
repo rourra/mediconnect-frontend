@@ -1,0 +1,186 @@
+.invmed-header {
+  margin-bottom: 1.5rem;
+}
+
+.invmed-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.invmed-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.invmed-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.invmed-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.invmed-tabs button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.invmed-tabs button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.invmed-tabs button span {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+}
+
+.invmed-tabs button.active span {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.invmed-loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+.invmed-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.invmed-empty h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.invmed-empty p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.invmed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.invmed-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invmed-card img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.invmed-card h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.invmed-email {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.invmed-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+}
+
+.invmed-status.en_attente {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.invmed-status.acceptee {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.invmed-status.refusee {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.invmed-actions {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.invmed-actions button {
+  flex: 1;
+  padding: 0.55rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.15s ease;
+}
+
+.invmed-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-accepter {
+  background: var(--success);
+  color: #fff;
+}
+
+.btn-accepter:hover:not(:disabled) {
+  background: #15803d;
+}
+
+.btn-refuser {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.btn-refuser:hover:not(:disabled) {
+  background: #fecaca;
+}

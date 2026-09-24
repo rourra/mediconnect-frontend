@@ -1,0 +1,132 @@
+.docpat-header {
+  margin-bottom: 1.25rem;
+}
+
+.docpat-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.docpat-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.docpat-search {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+}
+
+.docpat-search:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.docpat-message {
+  background: #dcfce7;
+  color: var(--success);
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.docpat-loading,
+.docpat-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.docpat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.1rem;
+}
+
+.docpat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.docpat-card img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.85rem;
+}
+
+.docpat-card h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.docpat-specialite {
+  margin: 0 0 0.15rem;
+  font-size: 0.82rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.docpat-email {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.docpat-btn {
+  width: 100%;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.docpat-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.docpat-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.docpat-btn.pending {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.docpat-btn.accepted {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.docpat-btn.refused {
+  background: #fee2e2;
+  color: var(--danger);
+}

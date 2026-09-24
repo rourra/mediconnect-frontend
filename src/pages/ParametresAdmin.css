@@ -1,0 +1,211 @@
+.pa-page {
+  --pa-encre: #111827;
+  --pa-doux: #64748b;
+  --pa-bordure: #e2e8f0;
+  --pa-fond-champ: #f8fafc;
+  --pa-primaire: #4f46e5;
+  --pa-primaire-fonce: #4338ca;
+  --pa-succes-fond: #dcfce7;
+  --pa-succes-texte: #166534;
+  --pa-erreur-fond: #fee2e2;
+  --pa-erreur-texte: #b91c1c;
+
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4px 0 56px;
+  color: var(--pa-encre);
+  box-sizing: border-box;
+}
+
+.pa-page *,
+.pa-page *::before,
+.pa-page *::after {
+  box-sizing: inherit;
+}
+
+.pa-entete h1 {
+  margin: 0 0 6px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.pa-entete p {
+  margin: 0 0 24px;
+  color: var(--pa-doux);
+  line-height: 1.5;
+}
+
+.pa-carte {
+  background: #fff;
+  border: 1px solid var(--pa-bordure);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+}
+
+.pa-carte h2 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* ---- Photo ---- */
+.pa-photo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pa-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--pa-bordure);
+}
+
+.pa-avatar--initiale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: var(--pa-primaire-fonce);
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+/* ---- Champs ---- */
+.pa-grille {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 18px;
+}
+
+.pa-grille--une {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 420px;
+}
+
+.pa-champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pa-champ span {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.pa-champ input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--pa-bordure);
+  border-radius: 10px;
+  background: var(--pa-fond-champ);
+  color: var(--pa-encre);
+  font: inherit;
+}
+
+.pa-champ input:focus-visible {
+  outline: 2px solid var(--pa-primaire);
+  outline-offset: 1px;
+  background: #fff;
+  border-color: transparent;
+}
+
+.pa-aide {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--pa-doux);
+}
+
+/* ---- Boutons ---- */
+.pa-actions {
+  margin-top: 18px;
+}
+
+.pa-bouton {
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--pa-primaire);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.pa-bouton:hover:not(:disabled) {
+  background: var(--pa-primaire-fonce);
+}
+
+.pa-bouton:focus-visible {
+  outline: 2px solid var(--pa-primaire);
+  outline-offset: 2px;
+}
+
+.pa-bouton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pa-bouton--secondaire {
+  background: #eef2ff;
+  color: var(--pa-primaire-fonce);
+}
+
+.pa-bouton--secondaire:hover:not(:disabled) {
+  background: #e0e7ff;
+}
+
+/* ---- Messages ---- */
+.pa-retour {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pa-retour--succes {
+  background: var(--pa-succes-fond);
+  color: var(--pa-succes-texte);
+}
+
+.pa-retour--erreur {
+  background: var(--pa-erreur-fond);
+  color: var(--pa-erreur-texte);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .pa-page {
+    padding: 4px 0 40px;
+  }
+
+  .pa-carte {
+    padding: 18px 16px;
+  }
+
+  .pa-grille {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pa-photo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pa-actions .pa-bouton {
+    width: 100%;
+  }
+}
+
+/* App.css applique un effet de soulèvement à TOUS les boutons (button:hover) :
+   on le neutralise ici pour garder des boutons stables dans cette page. */
+.pa-bouton:hover {
+  transform: none;
+}
