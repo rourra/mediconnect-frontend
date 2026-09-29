@@ -1,0 +1,277 @@
+.rdvmed-page {
+  padding: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   En-tête
+   --------------------------------------------------------------------------- */
+.rdvmed-header {
+  margin-bottom: 1.5rem;
+}
+
+.rdvmed-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+}
+
+.rdvmed-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Onglets de filtre
+   --------------------------------------------------------------------------- */
+.rdvmed-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.3rem;
+  border-radius: 14px;
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  width: fit-content;
+}
+
+.rdvmed-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.rdvmed-tabs button:hover {
+  background: var(--bg-card);
+}
+
+.rdvmed-tabs button.active {
+  background: var(--bg-card);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* pastille de compte à côté du libellé (le <span> avec le nombre) */
+.rdvmed-tabs button span {
+  min-width: 1.4rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4rem;
+}
+
+.rdvmed-tabs button.active span {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------------
+   États de chargement / vide
+   --------------------------------------------------------------------------- */
+.rdvmed-loading,
+.rdvmed-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+/* ---------------------------------------------------------------------------
+   Liste des rendez-vous
+   --------------------------------------------------------------------------- */
+.rdvmed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.rdvmed-item {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.rdvmed-item img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.rdvmed-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rdvmed-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.rdvmed-info p {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rdvmed-email {
+  color: var(--text-muted);
+}
+
+.rdvmed-datetime {
+  font-weight: 600;
+  color: var(--text-main) !important;
+}
+
+.rdvmed-motif {
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------------
+   Statut
+   --------------------------------------------------------------------------- */
+.rdvmed-status {
+  flex-shrink: 0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.rdvmed-status.en_attente {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.rdvmed-status.confirme {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.rdvmed-status.termine {
+  background: #e0e7ff;
+  color: var(--primary);
+}
+
+.rdvmed-status.annule {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+/* ---------------------------------------------------------------------------
+   Actions
+   --------------------------------------------------------------------------- */
+.rdvmed-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.rdvmed-actions button {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-page);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-confirmer {
+  color: var(--success);
+}
+
+.btn-confirmer:hover {
+  background: #dcfce7;
+  border-color: var(--success);
+}
+
+.btn-annuler {
+  color: var(--danger);
+}
+
+.btn-annuler:hover {
+  background: #fee2e2;
+  border-color: var(--danger);
+}
+
+.btn-terminer {
+  color: var(--primary);
+}
+
+.btn-terminer:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.rdvmed-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rdvmed-a-venir {
+  padding: 0.5rem 0.9rem;
+  border-radius: 10px;
+  background: var(--bg-page);
+  border: 1px dashed var(--border);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .rdvmed-item {
+    flex-wrap: wrap;
+  }
+
+  .rdvmed-info {
+    flex-basis: calc(100% - 76px);
+  }
+
+  .rdvmed-status {
+    margin-left: 76px;
+  }
+
+  .rdvmed-actions {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
