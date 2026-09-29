@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
-import "./RendezVousmedecin.css";
+import "./RendezVousMedecin.css";
 const FILTRES = [
   { valeur: "tous", label: "Tous" },
   { valeur: "en_attente", label: "En attente" },
