@@ -81,7 +81,13 @@ function Messagerie() {
       setTexte("");
       await chargerConversation(contactActif._id);
     } catch (error) {
-      alert(error.response?.data?.message || "Erreur lors de l'envoi");
+      console.error("Erreur envoi message :", error);
+      // Affiche le message du serveur s'il existe, sinon le code d'erreur
+      // (ex. 404, 500) ou la cause réseau (ex. Network Error, timeout).
+      alert(
+        error.response?.data?.message ||
+          `Erreur lors de l'envoi (${error.response?.status || error.message})`
+      );
     } finally {
       setIsSending(false);
     }
